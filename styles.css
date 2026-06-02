@@ -146,12 +146,12 @@ h2 {
 h1 {
   max-width: 720px;
   margin-bottom: 22px;
-  font-size: clamp(3.1rem, 8vw, 7.2rem);
+  font-size: clamp(2.45rem, 5vw, 4.4rem);
 }
 
 h2 {
   margin-bottom: 16px;
-  font-size: clamp(2.1rem, 5vw, 4.7rem);
+  font-size: clamp(1.75rem, 3vw, 3rem);
 }
 
 h3 {
@@ -246,7 +246,7 @@ h3 {
 .card-name {
   margin-bottom: 0;
   font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 3rem;
+  font-size: 2.4rem;
   line-height: 1;
 }
 
@@ -458,7 +458,7 @@ h3 {
   }
 
   .card-name {
-    font-size: 2.45rem;
+    font-size: 2.25rem;
   }
 
   .contact-actions .button {
@@ -466,7 +466,7 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2.65rem, 15vw, 4.7rem);
+    font-size: clamp(2.25rem, 11vw, 3.35rem);
   }
 
   .gallery,
