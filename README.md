@@ -1,6 +1,6 @@
-# True Frame Photo Co.
+# Michael Reyes Photography & Production
 
-A simple one-page photographer website for an imaginary no-edit photographer.
+A simple one-page photographer website for Michael Reyes / RSVP Reyes Video Production in Dallas-Fort Worth, TX.
 
 The site is built as plain HTML and CSS. It uses local placeholder images for:
 

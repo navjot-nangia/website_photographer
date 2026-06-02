@@ -193,6 +193,11 @@ h3 {
   color: var(--white);
 }
 
+.button.tertiary {
+  border-color: var(--line);
+  color: var(--forest);
+}
+
 .identity-band,
 .section,
 .services-section,
@@ -268,10 +273,14 @@ h3 {
 .card-contact {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
   margin: 30px 0 0;
   color: rgba(255, 255, 255, 0.72);
   font-size: 0.88rem;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .identity-copy p:not(.section-kicker),
@@ -374,6 +383,17 @@ h3 {
   min-width: 230px;
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.contact-actions .button {
+  min-width: 220px;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -397,6 +417,10 @@ h3 {
   .identity-band,
   .contact-section {
     grid-template-columns: 1fr;
+  }
+
+  .contact-actions {
+    justify-content: flex-start;
   }
 
   .gallery,
@@ -431,6 +455,14 @@ h3 {
   .hero-content {
     width: min(100% - 32px, 620px);
     margin: 0 auto 42px;
+  }
+
+  .card-name {
+    font-size: 2.45rem;
+  }
+
+  .contact-actions .button {
+    width: 100%;
   }
 
   h1 {
