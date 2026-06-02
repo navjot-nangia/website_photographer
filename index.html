@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=soft-blue-red-enquiry-20260602" />
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -46,7 +46,7 @@
             and coverage that still feels like the day it happened.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="tel:+14698658011">Call 469-865-8011</a>
+            <a class="button primary" href="tel:+14698658011">Call +1 469-865-8011</a>
             <a class="button secondary" href="#work">View work</a>
           </div>
         </div>
@@ -68,7 +68,7 @@
           <p class="card-contact">
             <a href="mailto:michael.reyes1998@yahoo.com">michael.reyes1998@yahoo.com</a>
             <span>·</span>
-            <a href="tel:+14698658011">469-865-8011</a>
+            <a href="tel:+14698658011">+1 469-865-8011</a>
           </p>
         </div>
         <div class="identity-copy">
@@ -170,7 +170,7 @@
       </section>
 
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
-        <div>
+        <div class="contact-copy">
           <p class="section-kicker">Contact Michael</p>
           <h2 id="contact-title">Book photo, video, or production coverage.</h2>
           <p>
@@ -178,11 +178,60 @@
             Fort Worth, and nearby North Texas communities.
           </p>
         </div>
-        <div class="contact-actions" aria-label="Contact options">
-          <a class="button primary" href="tel:+14698658011">469-865-8011</a>
-          <a class="button tertiary" href="mailto:michael.reyes1998@yahoo.com">
-            michael.reyes1998@yahoo.com
-          </a>
+
+        <div class="contact-panel">
+          <div class="contact-actions" aria-label="Contact options">
+            <a class="button primary" href="tel:+14698658011">+1 469-865-8011</a>
+            <a class="button tertiary" href="mailto:michael.reyes1998@yahoo.com">
+              michael.reyes1998@yahoo.com
+            </a>
+          </div>
+
+          <form class="enquiry-form" id="enquiry-form">
+            <div class="form-grid">
+              <label>
+                Name
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+            </div>
+            <div class="form-grid">
+              <label>
+                Phone
+                <input type="tel" name="phone" autocomplete="tel" />
+              </label>
+              <label>
+                Event date
+                <input type="date" name="date" />
+              </label>
+            </div>
+            <label>
+              Coverage type
+              <select name="coverage">
+                <option>Wedding or event</option>
+                <option>Engagement or portrait</option>
+                <option>Graduation</option>
+                <option>Wildlife</option>
+                <option>Video production</option>
+              </select>
+            </label>
+            <label>
+              Enquiry
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Tell Michael about the date, location, and what you need covered."
+                required
+              ></textarea>
+            </label>
+            <button class="button primary" type="submit">Send enquiry</button>
+            <p class="form-note">
+              This opens your email app with the enquiry ready to send to Michael.
+            </p>
+          </form>
         </div>
       </section>
     </main>
@@ -191,5 +240,36 @@
       <p>Michael Reyes · RSVP / Reyes Video Production · Dallas-Fort Worth, TX</p>
       <a href="#top">Back to top</a>
     </footer>
+
+    <script>
+      const enquiryForm = document.querySelector("#enquiry-form");
+
+      enquiryForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(enquiryForm);
+        const name = formData.get("name").trim();
+        const email = formData.get("email").trim();
+        const phone = formData.get("phone").trim();
+        const date = formData.get("date") || "Not provided";
+        const coverage = formData.get("coverage");
+        const message = formData.get("message").trim();
+        const subject = `Photography enquiry from ${name}`;
+        const body = [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Phone: ${phone || "Not provided"}`,
+          `Event date: ${date}`,
+          `Coverage type: ${coverage}`,
+          "",
+          "Enquiry:",
+          message,
+        ].join("\n");
+
+        window.location.href =
+          `mailto:michael.reyes1998@yahoo.com?subject=${encodeURIComponent(subject)}` +
+          `&body=${encodeURIComponent(body)}`;
+      });
+    </script>
   </body>
 </html>
