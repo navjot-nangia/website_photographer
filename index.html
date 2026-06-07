@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=soft-blue-red-enquiry-20260602" />
+    <link rel="stylesheet" href="styles.css?v=portfolio-vertical-20260606" />
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -33,8 +33,9 @@
       <section class="hero" aria-labelledby="hero-title">
         <img
           class="hero-image"
-          src="assets/images/hero-engagement.png"
-          alt="A couple walking through tall grass in warm natural light"
+          src="assets/images/hero-parrot.jpg"
+          alt="A blue hyacinth macaw perched among tree branches"
+          fetchpriority="high"
         />
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -85,43 +86,109 @@
 
       <section class="section" id="work" aria-labelledby="work-title">
         <div class="section-heading">
-          <p class="section-kicker">Portfolio samples</p>
-          <h2 id="work-title">Raw moments, lightly framed.</h2>
+          <p class="section-kicker">Selected work</p>
+          <h2 id="work-title">Portraits, wildlife, and milestones.</h2>
           <p>
-            Sample imagery for Michael's site: wildlife, milestones, and event
-            coverage that keeps the edit out of the way.
+            Explore studio lighting, natural portraits, wildlife, and graduation
+            coverage photographed by Michael.
           </p>
         </div>
 
-        <div class="gallery">
-          <article class="photo-tile">
+        <div class="gallery" id="portfolio-gallery" aria-label="Photography portfolio">
+          <article class="photo-tile landscape">
             <img
-              src="assets/images/wildlife-fox.png"
-              alt="A fox standing at the edge of a meadow"
+              src="assets/images/portfolio/studio-profile.jpg"
+              alt="Profile portrait of a woman against purple studio lighting"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="photo-caption">
+              <p>Studio portrait</p>
+              <span>Directional light and saturated color.</span>
+            </div>
+          </article>
+          <article class="photo-tile wide">
+            <img
+              src="assets/images/portfolio/flamingo.jpg"
+              alt="A flamingo standing in reflective water"
+              loading="lazy"
+              decoding="async"
             />
             <div class="photo-caption">
               <p>Wildlife</p>
-              <span>Patience, distance, and natural habitat.</span>
+              <span>Natural behavior, color, and habitat.</span>
             </div>
           </article>
-          <article class="photo-tile">
+          <article class="photo-tile portrait">
             <img
-              src="assets/images/graduation-family.png"
-              alt="A graduate celebrating with family outside"
+              src="assets/images/portfolio/editorial-pink.jpg"
+              alt="Editorial portrait of a woman in warm pink studio light"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="photo-caption">
+              <p>Editorial portrait</p>
+              <span>Styled color with a soft finish.</span>
+            </div>
+          </article>
+          <article class="photo-tile portrait">
+            <img
+              src="assets/images/portfolio/creative-portrait.jpg"
+              alt="Creative portrait of a man in red and blue studio lighting"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="photo-caption">
+              <p>Creative portrait</p>
+              <span>Bold lighting with a graphic edge.</span>
+            </div>
+          </article>
+          <article class="photo-tile tall">
+            <img
+              src="assets/images/portfolio/graduation.jpg"
+              alt="Graduate smiling outdoors in an orange gown"
+              loading="lazy"
+              decoding="async"
             />
             <div class="photo-caption">
               <p>Graduation</p>
-              <span>Family pride without heavy retouching.</span>
+              <span>Milestone portraits with personality.</span>
             </div>
           </article>
-          <article class="photo-tile">
+          <article class="photo-tile landscape">
             <img
-              src="assets/images/wedding-rings.png"
-              alt="A couple exchanging rings at an outdoor ceremony"
+              src="assets/images/portfolio/studio-closeup.jpg"
+              alt="Close studio portrait of a woman in soft purple light"
+              loading="lazy"
+              decoding="async"
             />
             <div class="photo-caption">
-              <p>Weddings</p>
-              <span>Ceremony, guests, details, and real light.</span>
+              <p>Beauty portrait</p>
+              <span>Soft light and close detail.</span>
+            </div>
+          </article>
+          <article class="photo-tile landscape">
+            <img
+              src="assets/images/portfolio/black-white-portrait.jpg"
+              alt="Black and white side portrait of a man wearing glasses"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="photo-caption">
+              <p>Black and white</p>
+              <span>A clean monochrome character study.</span>
+            </div>
+          </article>
+          <article class="photo-tile landscape">
+            <img
+              src="assets/images/portfolio/studio-backlight.jpg"
+              alt="Woman looking over her shoulder in purple studio light"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="photo-caption">
+              <p>Studio lighting</p>
+              <span>Shape, shadow, and controlled backlight.</span>
             </div>
           </article>
         </div>
@@ -164,6 +231,45 @@
             <p>
               Small weddings, receptions, parties, community gatherings, and
               production work documented as they unfold.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="process-section" id="process" aria-labelledby="process-title">
+        <div class="process-intro">
+          <p class="section-kicker">What to expect</p>
+          <h2 id="process-title">A clear process from first conversation to final delivery.</h2>
+          <p>
+            Every assignment starts with the people, place, and purpose. Michael
+            plans the practical details ahead of time, then keeps the session
+            relaxed enough for natural moments to happen.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article>
+            <span>01</span>
+            <h3>Plan the coverage</h3>
+            <p>
+              Discuss the date, location, schedule, visual style, and the moments
+              that matter most before the camera comes out.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Photograph naturally</h3>
+            <p>
+              Work with available light, thoughtful direction, and room for
+              unscripted expressions rather than forcing every frame.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Finish with care</h3>
+            <p>
+              Select, balance, and color the strongest images so the finished
+              collection feels consistent while staying true to the day.
             </p>
           </article>
         </div>
